@@ -53,8 +53,7 @@ There are some additional rules followed by this codebase...
 
 
 * ~~[Never use nulls](https://code.google.com/p/guava-libraries/wiki/UsingAndAvoidingNullExplained). Instead, use `Opt`.~~
-    * *UPDATE*: Prefer @Nullable and @NotNull over Opt; the tool support amounts to the same thing but reduces allocation
-load. I'll be converting code over time.
+    * *UPDATE*: This advice is obsolete. Use @Nullable and @NotNull (in dhcoder.support.annoations) instead. Thanks to IntelliJ tool support, you enjoy the same benefits as Opt without the need to allocate an extra object. In a future change I'll remove Opt.
 * Prefer composition over inheritance. Really, avoid inheritance. 
     * An abstract base class is OK to provide default implementations of interface methods or allow base methods to be
     protected instead of public like they are in an interface, but no matter what, you should never use `super` except
